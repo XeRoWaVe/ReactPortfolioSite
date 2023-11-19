@@ -1,0 +1,11 @@
+@keyframes React {
+    0% {background-color: blue;}
+    25% {background-color: red;}
+    50% {background-color: black;}
+    100% {background-color: green;}
+}
+
+.test {
+    animation-name: React;
+    animation-duration: 5s;
+}
