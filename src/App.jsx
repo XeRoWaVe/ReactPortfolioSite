@@ -4,11 +4,11 @@ import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
 import Login from './components/Login/login'
 import { useState } from 'react'
-import {  RouterProvider, createBrowserRouter, Navigate, createRoutesFromElements} from 'react-router-dom'
+import {  RouterProvider, createBrowserRouter, Navigate, createRoutesFromElements, Route} from 'react-router-dom'
 import './App.css'
 
 const router = createBrowserRouter(createRoutesFromElements(
-  
+  <Route path="/" element={<AboutMe />} />
 ))
 
 function App() {
@@ -21,13 +21,7 @@ function App() {
 
 
   return (
-    <div>
-      <AboutMe />
-      <ContactMe />
-      <Projects />
-      <Skills />
-      <Login handleLogin={handleLogin} />
-    </div>
+    <RouterProvider router={router}/>
   )
 }
 
